@@ -1,13 +1,14 @@
 // cursor
 var cursor = document.getElementById('cursor')
+
 document.addEventListener('mousemove', (e) => {
   const height = cursor.offsetHeight;
   const width = cursor.offsetWidth;
 
-  cursor.style.left = (e.pageX - width/2) + 'px';
-  cursor.style.top = (e.pageY - height/2) + 'px';
+  cursor.style.left = e.pageX - width/2 + 'px';
+  cursor.style.top = e.pageY - height/2 + 'px';
+  
 })
-
 // experience 
 const boxes = document.querySelectorAll('.content');
 
